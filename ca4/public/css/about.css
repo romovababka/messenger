@@ -1,0 +1,31 @@
+img {
+    width: 80%;
+    padding-top: 20px;
+    border-radius: 50%;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+header{
+    margin-top: 10px;
+    text-align: center;
+    color: aquamarine;
+}
+.container{
+    margin-top: 30px;
+}
+
+body {
+    background-color: #5c5470;
+    color: beige;
+}
+h2{
+    height: 12px;
+    text-align: center;
+    color: lightskyblue;
+}
+.col-7{
+    padding-top: 20px;
+}

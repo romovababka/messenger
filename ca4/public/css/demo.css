@@ -1,0 +1,137 @@
+{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    position: fixed;
+    color: bisque;
+    background-color: #680747;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+
+/* Style the side navigation */
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 47px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+}
+
+/*make the active user text inherit style from container*/
+
+.inbox__people{
+    color: white;
+    padding: 16px;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+/* Change color on hover */
+.sidenav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the content */
+.content {
+    margin-left: 200px;
+    padding-left: 20px;
+    margin-top: 47px;
+}
+/*ul li {
+    display: inline;
+    margin-left: 20px;
+}
+ul {
+    margin-top: 20px;
+}*/
+.navbar a{
+    color: #5c5470;
+    float: left;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 14px 16px;
+}
+.navbar a:hover{
+    color: darkmagenta;
+    background-color: lightpink;
+    cursor: pointer;
+}
+
+#typing {
+    color: white;
+    padding: 16px;
+}
+#join{
+    position: fixed;
+    color: rgb(92, 25, 25);
+}
+
+.join_disjoin {
+    color: purple;
+    text-align: center;
+    padding: 3px;
+}
+.messages__history{
+    padding-top: 5px;
+}
+.message__author {
+    font-weight: bold;
+    font-style: italic;
+}
+.time_date{
+    font-size: 10px;
+}
+.received__message > p{
+    margin-bottom: 0px;
+}
+.sent__message > p{
+    margin-bottom: 0px;
+}
+.message_form {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: white;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+.message_form__input{
+    padding: 10px;
+    border-radius: 15px;
+    margin-right: 50px;
+    width: 70%; 
+}
+.message_form__button {
+    margin-right: 20px;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+.messages__history{
+    padding-bottom: 100px;
+}
+.outgoing__message {
+    text-align: right;
+    padding-right: 20px;
+}
