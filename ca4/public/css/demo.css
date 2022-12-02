@@ -135,3 +135,8 @@ ul {
     text-align: right;
     padding-right: 20px;
 }
+
+
+button{
+    cursor: pointer;
+}

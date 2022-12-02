@@ -64,20 +64,8 @@ socket.on("new user", function (data) {
 });
     //joined.innerHTML = `<p>${user} joined</p>`;
 socket.on("user-connected", (userId) => {
-  messageBox.innerHTML += `<p class="join_disjoin">${userId} joined</p>`;
+  messageBox.innerHTML += `<p class="join_disjoin">${userId} joined</p>`;           //user joins a chat
       //joined.innerHTML = `<p>${userId} joined</p>`;           // WORKING
-      //messageBox.innerHTML += `<p>${user} joined</p>`;       show joint for all users(?)
-      /*let joined = `<p>${user} joined</p>`;
-      messageBox.innerHTML += joined; */
-      /*const myMsg = `
-        <div class="outgoing__message">
-          <div class="sent__message">
-            <p>${user} joined</p>
-          </div>
-        </div>`;
-    })*/
-    //let number = activeUsers.size;
-    //document.getElementById("active_users").innerHTML = number;
 });
 
 //when a user leaves
@@ -86,17 +74,10 @@ socket.on("user disconnected", function (userName) {
     document.querySelector(`.${userName}-userlist`).remove();
 });
 socket.on("user-disconnected", (userId) => {
-  messageBox.innerHTML += `<p class="join_disjoin">${userId} disjoined</p>`;
+  messageBox.innerHTML += `<p class="join_disjoin">${userId} left</p>`;             // user left a chat
 });
 
 
-//my code
-/*socket.on("chat message", data => {
-  appendMessage(data)
-})*/
-/*socket.on("new user", userName =>{
-  appendMessage(`${userName} connected`)
-})*/
 
 const inputField = document.querySelector(".message_form__input");
 const messageForm = document.querySelector(".message_form");
@@ -154,14 +135,8 @@ socket.on("chat message", function (data) {
 
 socket.on("typing", (userId) => {
   typing.innerHTML = `<p>${userId} is typing...</p>`;
-  setTimeout(() => {
+  setTimeout(() => {                                                               // user is typing
       typing.innerHTML = "";
   }, 3000);
 });
 
-
-/*socket.on('message', function (data) {
-    //console.log(data.count);
-    let num = getElementById("active_users");
-    num.innerHTML = `<p>${data.count}</p>`;
-});*/

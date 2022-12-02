@@ -26,17 +26,16 @@ io.on("connection", function (socket) {
     socket.on("new user", function (data) {
         socket.userId = data;
         activeUsers.add(data);
-        /*socket.broadcast.emit("user-connected")*/
         //... is the the spread operator, adds to the set while retaining what was in there already
         io.emit("new user", [...activeUsers]);
         //let who_join
-        socket.broadcast.emit("user-connected", socket.userId);
+        socket.broadcast.emit("user-connected", socket.userId);                   // user join a chat
     });
 
 
 
     socket.on("disconnect", function () {
-        socket.broadcast.emit("user-disconnected", socket.userId);
+        socket.broadcast.emit("user-disconnected", socket.userId);               // left a chat
         activeUsers.delete(socket.userId);
         io.emit("user disconnected", socket.userId);
         //socket.broadcast.emit("user-disconnected", socket.userId);
@@ -48,21 +47,11 @@ io.on("connection", function (socket) {
 
 
     socket.on("typing", () => {
-        socket.broadcast.emit("typing", socket.userId);
+        socket.broadcast.emit("typing", socket.userId);                               // typing
     });
 
 
 });
 
 
-/*let count = 0;
 
-io.on('connection', function(socket) {
-    count++;
-    io.sockets.emit('message', { count: count });
-
-    io.sockets.on('disconnect', function(){
-        count--;
-        io.sockets.emit('message', { count: count });
-    })
-});*/
